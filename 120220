@@ -1,0 +1,20 @@
+SELECT CD_CLI                                          
+     ,TS_SLCT_ATL_CAD 
+     ,CD_OGM_CADM 
+     ,CD_MDU                                          
+     ,CD_TIP_SNL_AVS                                  
+     ,CD_ITCE_CNL_ATDT                                
+     ,VALUE (CD_TIP_MTV_RSA, 0)                       
+     ,CD_UOR_RSP_VLDC                                 
+     ,CD_TIP_CPVT                                     
+     ,CD_TIP_EST_ALT                                  
+     ,VALUE (CD_USU_RSP_ALT_CAD, ' ')                 
+     ,VALUE (TS_VLDC_ATL_CAD, '0001-01-01-01.01.01.000000') 
+     ,VALUE (NR_PTL_ETGA_IM, 0)                       
+     ,NR_SEQL_OPR_PND                                 
+     ,VALUE (CD_CLI_RLCD, 0 )                         
+FROM DB2MCI.SLCT_ATL_CAD
+WHERE CD_CLI <> 0       
+AND TS_SLCT_ATL_CAD > '0001-01-01-01.01.01.000000'
+AND CD_OGM_CADM = 5003
+FETCH FIRST 1 ROWS ONLY
