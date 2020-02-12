@@ -1,3 +1,5 @@
+MCIS1831-CRS-F01
+
 SELECT CD_CLI                                          
      ,TS_SLCT_ATL_CAD 
      ,CD_OGM_CADM 
